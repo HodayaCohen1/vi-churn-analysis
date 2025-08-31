@@ -418,6 +418,10 @@ print("\n=== Data Exploration and Feature Engineering Complete ===")
 print("\n8. Creating visualizations for presentation...")
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+# Create output directory if it doesn't exist
+os.makedirs('vi_churn_analysis_output', exist_ok=True)
 
 # Set style for clean, professional look
 plt.style.use('default')

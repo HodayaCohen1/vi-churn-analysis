@@ -11,6 +11,11 @@ print("=== Outreach Optimization Analysis ===\n")
 
 # Load predictions and actual data
 print("1. Loading data...")
+import os
+
+# Create output directory if it doesn't exist
+os.makedirs('vi_outreach_output', exist_ok=True)
+
 predictions_df = pd.read_csv('vi_model_output/predictions.csv')
 features_df = pd.read_csv('vi_churn_analysis_output/processed_features.csv')
 
