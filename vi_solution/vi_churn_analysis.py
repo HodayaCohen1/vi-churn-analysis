@@ -389,6 +389,10 @@ print("\n" + "="*50 + "\n")
 # 5. Save processed data
 print("5. Saving processed data...")
 
+import os
+# Create output directory if it doesn't exist
+os.makedirs('vi_churn_analysis_output', exist_ok=True)
+
 # Remove duplicates if any exist
 print(f"Before deduplication: {len(features)} rows")
 features = features.drop_duplicates(subset=['member_id'], keep='first')
@@ -418,10 +422,7 @@ print("\n=== Data Exploration and Feature Engineering Complete ===")
 print("\n8. Creating visualizations for presentation...")
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
 
-# Create output directory if it doesn't exist
-os.makedirs('vi_churn_analysis_output', exist_ok=True)
 
 # Set style for clean, professional look
 plt.style.use('default')
